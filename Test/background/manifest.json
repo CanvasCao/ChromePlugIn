@@ -1,0 +1,40 @@
+{
+  "manifest_version": 2,
+  "name": "communication",
+  "version": "1.0",
+  "description": "communicationDescription",
+  "icons": {
+    "16": "img/pig.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "16": "img/pig.png"
+    }
+//    "default_title": "popup",
+//    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://item.jd.com/*"
+      ],
+      "js": [
+        "js/jquery-1.8.3.min.js",
+        "js/app.js"
+      ],
+      "css": [
+      ]
+    }
+  ],
+  "background":{
+    "scripts":[
+      "js/jquery-1.8.3.min.js",
+      "js/background.js"]
+  },
+  "permissions": [
+    "tabs",
+    "contextMenus",
+    "http://*/*",
+    "https://*/*"
+  ]
+}
