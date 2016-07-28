@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "neverClick",
+  "version": "1.0",
+  "description": "neverClickDescription",
+  "icons": {
+    "16": "img/pig.png"
+  },
+
+  "content_scripts":[
+    {
+      "matches":["*://www.baidu.com/"],
+      "js":[
+        "js/jquery-1.8.3.min.js",
+        "js/neverClick.js"
+      ]
+    }
+  ]
+}

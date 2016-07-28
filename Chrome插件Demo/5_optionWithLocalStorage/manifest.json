@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "optionWithLocalStorage",
+  "version": "1.0",
+  "description": "optionWithLocalStorageDescription",
+  "icons": {
+    "16": "img/pig.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "16": "img/pig.png"
+    },
+    "default_title": "weather",
+    "default_popup": "popup.html"
+  },
+  "options_page": "option.html",
+  "permissions": [
+    //permissions 代表了跨域的权限 既然已经可以跨域 那就不需要jsonp
+    "http://n1.jimi.la/apps_T1/test2.php"
+  ]
+}

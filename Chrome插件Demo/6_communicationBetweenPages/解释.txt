@@ -1,0 +1,3 @@
+整个程序先加载background.js
+background.js 启动一个监听 接受不同的message就做不同的callback
+打开popup.html页面时 发送callback background页面的监听被触发
