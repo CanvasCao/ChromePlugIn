@@ -8,9 +8,8 @@
     $('body').append('<div id="jimiMirror"></div>');
 
     //JQ对象
-    var $title = $('#name h1').eq(0);
     var $triggerDom = $('#spec-n1').eq(0);
-    var $TD = {
+    var triggerObj = {
         top: $triggerDom.offset().top,
         left: $triggerDom.offset().left,
         height: $triggerDom.height(),
@@ -23,7 +22,8 @@
         'background-size': 'cover',
     });
 
-    var jimiMirror = new JimiMirror('#jimiMirror', {top: $TD.top - 30});
+    //实例化魔镜.................................
+    var jimiMirror = new JimiMirror('#jimiMirror', {top: triggerObj.top - 30});
 
     //$triggerDom TADA的定时器
     var tadaTimer = null;
@@ -77,8 +77,7 @@
             }
         }
     })
-
-
+    
     $(window).mouseup(function (e) {
         if (ifDragging) {
             ifDragging = false;
@@ -117,7 +116,7 @@
 
 
     function ifTrigged(pageX, pageY) {
-        if (pageX > $TD.left && pageX < ($TD.left + $TD.width) && pageY > $TD.top && pageY < ($TD.top + $TD.height)) {
+        if (pageX > triggerObj.left && pageX < (triggerObj.left + triggerObj.width) && pageY > triggerObj.top && pageY < (triggerObj.top + triggerObj.height)) {
             return true;
         } else {
             return false;

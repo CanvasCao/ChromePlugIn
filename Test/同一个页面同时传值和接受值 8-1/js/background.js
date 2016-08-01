@@ -21,5 +21,9 @@ chrome.runtime.onMessage.addListener(function (message, sender, callback) {
 
         //实际这一步调用接口存数据库
         localStorage.setItem(new Date().toLocaleString(), JSON.stringify(message));
+    } else if (message.buy) {
+        localStorage.setItem(new Date().toLocaleString(), JSON.stringify(message));
     }
 })
+
+

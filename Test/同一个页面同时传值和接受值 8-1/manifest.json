@@ -32,6 +32,19 @@
       "css": [
         "css/jimiMirror.css"
       ]
+    },
+    {
+      "matches": [
+        "*://cart.jd.com/*"
+      ],
+      "js": [
+        "js/tool/jquery-1.8.3.min.js",
+        "js/jimiHost.js",
+        "js/app/appBuy.js"
+      ],
+      "css": [
+        "css/jimiMirror.css"
+      ]
     }
   ],
   "background": {
