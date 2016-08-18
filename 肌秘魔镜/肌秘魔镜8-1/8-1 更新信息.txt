@@ -1,0 +1,1 @@
+8-1 用background页面 发送ajax 记录购买和收藏

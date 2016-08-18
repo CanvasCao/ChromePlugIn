@@ -15,12 +15,31 @@ if (!uid) {
 }
 
 
+//实际这一步应该要向服务器发送购买和购物信息
 chrome.runtime.onMessage.addListener(function (message, sender, callback) {
     if (message.add) {
         //callback('hello from background');
 
-        //实际这一步调用接口存数据库
         localStorage.setItem(new Date().toLocaleString(), JSON.stringify(message));
+
+
+//        $.ajax({
+//            type: "post",
+////            url: jimiHost + '/getSimpleSearchApi.php' ,
+//            url: jimiHost + '/clickDomStr.json',
+//            data: {
+//                keywords: '雅诗兰黛',
+//            },
+//            success: function (data) {
+//                console.log('=================='+JSON.stringify(data));
+//            },
+//
+//            error: function (err) {
+//                console.log('ERROR!');
+//                console.log(err);
+//            }
+//        });
+
     } else if (message.buy) {
         localStorage.setItem(new Date().toLocaleString(), JSON.stringify(message));
     }

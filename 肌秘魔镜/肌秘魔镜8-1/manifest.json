@@ -27,7 +27,7 @@
         "js/class/jimiMirror.js",
         "js/app/appMirror.js",
         //appSendMessage.js 向background.js发送请求
-        "js/app/appSendMessage.js"
+        "js/app/appCart.js"
       ],
       "css": [
         "css/jimiMirror.css"
@@ -49,6 +49,8 @@
   ],
   "background": {
     "scripts": [
+      "js/tool/jquery-1.8.3.min.js",
+      "js/jimiHost.js",
       //background 启动监听接受所有页面的请求
       "js/background.js"
     ]

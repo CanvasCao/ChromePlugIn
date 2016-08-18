@@ -1,0 +1,13 @@
+1、引入插件
+1.1读取localStorage是否有uid没有则随机生成一个
+1.2启动background开启监听
+页面会将购买和收藏事件发送给background
+由background统一发送给服务器
+
+2、item页面
+引入Class魔镜 蜂巢 中间成分
+2.1 eval面包屑字符串得到是否化妆品页面
+2.2 加魔镜 绑定事件 点击某dom收藏时 向background发送【插入收藏数据】请求
+
+3、buy页面
+3.1 绑定事件 点击某dom购买时 遍历列表 获得所有购物信息 向background发送【插入购物数据】请求
